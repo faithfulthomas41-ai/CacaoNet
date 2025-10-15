@@ -1,0 +1,28 @@
+[project]
+name = 'CacaoNet'
+description = ''
+authors = []
+telemetry = true
+cache_dir = './.cache'
+requirements = []
+[contracts.farmer-verification]
+path = 'contracts/farmer-verification.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.supply-registry]
+path = 'contracts/supply-registry.clar'
+clarity_version = 3
+epoch = '3.2'
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
